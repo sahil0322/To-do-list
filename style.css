@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  background: url('Cd2kqV0.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: contain;
+ 
+  
+  font-family: 'Poppins', sans-serif;
+}
+
+    .todo-container {
+      width: 90%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+      align-items: center;
+    }
+
+   h1 {
+     margin-bottom: 20px;
+     font-weight: 700;
+     font-size: 28px;
+     color: white;
+     text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+     background-color: rgba(100, 100, 100, 0.6);
+     display: inline-block;
+     padding: 5px 10px;
+     border-radius: 8px;
+   }
+    .input-area {
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    #taskInput {
+      flex: 1;
+      max-width: 400px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    #addTaskBtn {
+      background: #f9d56e;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #333;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #addTaskBtn:hover {
+      background: #f7ca42;
+    }
+
+   
+    #taskBoard {
+      width: 100%; 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 15px;
+
+
+      flex: 1;
+      overflow-y: auto;
+      padding: 0 10px 10px 10px; 
+    }
+
+    .note {
+      background: #fff59d;
+      margin-top: 10px;
+      padding: 15px;
+      border-radius: 7px;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+      transform: rotate(var(--rotate));
+      transition: transform 0.2s, box-shadow 0.3s;
+      position: relative;
+      min-height: 80px;
+      word-wrap: break-word;
+    }
+
+    .note:hover {
+      transform: rotate(0deg) scale(1.03);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .note span {
+      display: block;
+      cursor: pointer;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .note.completed span {
+      text-decoration: line-through;
+      color: #777;
+    }
+
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #d32f2f;
+      font-size: 18px;
+      cursor: pointer;
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      transition: color 0.3s;
+    }
+
+    .delete-btn:hover {
+      color: #ff0000;
+    }
+
+    .pin {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      background: #e53935;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
