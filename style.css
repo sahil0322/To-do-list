@@ -9,7 +9,7 @@ body {
   background: url('pexels-umkreisel-app-956999.jpg');
   background-position: center;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
  
   
   font-family: 'Poppins', sans-serif;
@@ -146,3 +146,4 @@ body {
       box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 
     }
+
