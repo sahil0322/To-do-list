@@ -30,11 +30,24 @@ function createNoteElement(text) {
 
     const span = document.createElement('span');
     span.textContent = text;
-    span.addEventListener('click', () => {
-        div.classList.toggle('completed');
-        saveNotes();
+    span.addEventListener('dblclick', () => {
+        span.contentEditable = true;
+        span.focus();
     });
 
+    span.addEventListener('blur', () => {
+    span.contentEditable = false; 
+        saveNotes();                
+    });
+
+    span.addEventListener('click', () => {
+        if (span.contentEditable === 'true') {
+            return;
+     }
+        div.classList.toggle('completed');
+    saveNotes();
+    });
+    
     const btn = document.createElement('button');
     btn.textContent = '✕';
     btn.className = 'delete-btn';
@@ -71,4 +84,5 @@ function loadNotes() {
         div.style.setProperty('--rotate', n.rotate);
         taskBoard.appendChild(div);
     });
+
 }
