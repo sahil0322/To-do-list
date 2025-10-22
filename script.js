@@ -88,3 +88,8 @@ function loadNotes() {
 
 }
 
+new Sortable(taskBoard, {
+    animation: 150, 
+    onEnd: saveNotes 
+});
+
