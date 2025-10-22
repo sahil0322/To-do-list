@@ -47,10 +47,11 @@ function createNoteElement(text) {
         div.classList.toggle('completed');
     saveNotes();
     });
-    
-    const btn = document.createElement('button');
-    btn.textContent = '✕';
-    btn.className = 'delete-btn';
+
+const btn = document.createElement('button');
+btn.textContent = '✕';
+btn.className = 'delete-btn';
+btn.setAttribute('aria-label', 'Delete note'); 
     btn.addEventListener('click', () => {
         div.remove();
         saveNotes();
@@ -86,3 +87,4 @@ function loadNotes() {
     });
 
 }
+
