@@ -14,6 +14,8 @@ body {
   
   font-family: 'Poppins', sans-serif;
 }
+     #taskInput:focus,
+     #addTaskBtn:focus,
 
     .todo-container {
       width: 90%;
@@ -118,6 +120,11 @@ body {
       color: #777;
     }
 
+.note:focus-within {
+  outline: 2px solid #f9d56e;
+  outline-offset: 2px;
+}
+
     .delete-btn {
       background: none;
       border: none;
@@ -133,6 +140,11 @@ body {
     .delete-btn:hover {
       color: #ff0000;
     }
+    
+    .delete-btn:focus {
+  outline: 2px solid #d32f2f;
+  outline-offset: 2px;
+}
 
     .pin {
       position: absolute;
@@ -146,4 +158,5 @@ body {
       box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 
     }
+
 
